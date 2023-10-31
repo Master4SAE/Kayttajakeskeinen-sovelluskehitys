@@ -14,5 +14,8 @@
     "eslint": "^8.52.0",
     "eslint-config-google": "^0.14.0",
     "nodemon": "^3.0.1"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2"
   }
 }
