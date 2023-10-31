@@ -3,12 +3,19 @@ import http from 'http';
 import bodyParser from "body-parser";
 import fs from 'fs';
 
+const customerData = {
+  name: 'Sohaib',
+  Lastname: 'Ebrahimi',
+  age: 20,
+  studentOf: 'Metropolia',
+}
+
 const hostname = '127.0.0.1';
 const port = 65535;
 
 const server = http.createServer((req, res) => {
   if (req.method === 'GET' && req.url === '/data') {
-    const responseData = { message: 'This is your data' };
+    const responseData = customerData;
     res.setHeader('Content-Type', 'application/json');
     res.statusCode = 200;
     res.end(JSON.stringify(responseData));
