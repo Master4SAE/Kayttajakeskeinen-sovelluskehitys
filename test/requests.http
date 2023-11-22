@@ -1,26 +1,39 @@
 ### GET /
 GET http://localhost:3000/
 
-### ITEMS ###
-### GET /items
-GET http://localhost:3000/api/items
+### Get all media items
+GET http://localhost:3000/media
 
 ### GET /items/:id
-GET http://localhost:3000/api/items/6
+GET http://localhost:3000/media/9625
 
 ### POST /items
-POST http://localhost:3000/api/items
+POST http://localhost:3000/media
 content-type: application/json
 
-{"name": "kurkku"}
+{
+      "media_id": 0,
+      "filename": "0.jpg",
+      "filesize": 0,
+      "title": "Zero",
+      "description": "First item added",
+      "user_id": 0,
+      "media_type": "image/jpeg",
+      "created_at": "22.11.2023"
+    }
 
-### POST /items error
-POST http://localhost:3000/items
+### Put item by id works
+PUT http://localhost:3000/media/0
+content-type: application/json
 
-{"jotain": "jotan"}
+{
+  "title": "New TTTTTTTTTTTT"
+}
 
-### DELETE /items/:id
-DELETE http://localhost:3000/api/items/5
+### DELETE item by id works
+DELETE http://localhost:3000/media/0
+
+//taa inja
 
 ### PUT /items/:id
 PUT http://localhost:3000/api/items/6
