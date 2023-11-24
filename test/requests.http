@@ -33,71 +33,35 @@ content-type: application/json
 ### DELETE item by id works
 DELETE http://localhost:3000/media/0
 
-//taa inja
-
-### PUT /items/:id
-PUT http://localhost:3000/api/items/6
-content-type: application/json
-
-{"name": "updated omena"}
-
-
-
 ### USERS ###
-### GET all users
-GET http://localhost:3000/api/user
+### GET all users Works
+GET http://localhost:3000/user
 
-### GET user by id
-GET http://localhost:3000/api/user/305
+### GET user by id works
+GET http://localhost:3000/user/260
 
-### POST /api/user
-POST http://localhost:3000/api/user
+### POST /user works
+POST http://localhost:3000/user
 content-type: application/json
 
-{
-    "username": "new username",
-    "password": "new password",
-    "email": "new email"
-}
+  {
+    "user_id": 0,
+    "username": "updated username",
+    "password": "updated password",
+    "email": "vchar@example.com",
+    "user_level_id": 1,
+    "created_at": "2020-09-12T06:56:41.000Z"
+  }
 
-### PUT /api/user/:id
-PUT http://localhost:3000/api/user/260
+
+### PUT /user/:id Worked!
+PUT http://localhost:3000/user/260
 content-type: application/json
+
 {
     "username": "updated username",
     "password": "updated password"
 }
 
-### DELETE /api/user/:id
-DELETE http://localhost:3000/api/user/305
-
-
-
-### MEDIA ###
-### GET all media items
-GET http://localhost:3000/api/media
-
-### GET media by id
-GET http://localhost:3000/api/media/9632
-
-### POST /api/media
-POST http://localhost:3000/api/media
-content-type: application/json
-{
-  "filename": "kdh4.jpg",
-  "title": "New image",
-  "description": "The description of the new image",
-  "user_id": 305,
-  "media_type": "image/jpeg"
-}
-
-### PUT /api/media/:id
-PUT http://localhost:3000/api/media/9626
-content-type: application/json
-{
-  "title": "Basement modified",
-  "description": "Some new description"
-}
-
-### DELETE /api/media/:id
-DELETE http://localhost:3000/api/media/9626
+### DELETE user woorks
+DELETE http://localhost:3000/user/305
