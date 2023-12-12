@@ -4,34 +4,31 @@ GET http://localhost:3000/
 ### Get all media items
 GET http://localhost:3000/media
 
-### GET /items/:id
-GET http://localhost:3000/media/9625
-
-### POST /items
+### POST item to media
 POST http://localhost:3000/media
-content-type: application/json
+Content-Type: application/json
 
 {
-      "media_id": 0,
-      "filename": "0.jpg",
-      "filesize": 0,
-      "title": "Zero",
-      "description": "First item added",
-      "user_id": 0,
-      "media_type": "image/jpeg",
-      "created_at": "22.11.2023"
-    }
+      "filename": "alfa.jpg",
+      "title": "1",
+      "description": "alfa item added"
+}
 
-### Put item by id works
-PUT http://localhost:3000/media/0
-content-type: application/json
+### GET Item from media by id
+GET http://localhost:3000/media/26
+
+### PUT Item worked
+PUT http://localhost:3000/media/26
+Content-Type: application/json
 
 {
-  "title": "New TTTTTTTTTTTT"
+      "filename": "a.jpg",
+      "title": "1aaaaaaaä",
+      "description": "ald"
 }
 
 ### DELETE item by id works
-DELETE http://localhost:3000/media/0
+DELETE http://localhost:3000/media/26
 
 ### USERS ###
 ### GET all users Works
